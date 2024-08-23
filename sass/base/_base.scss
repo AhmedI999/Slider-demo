@@ -1,0 +1,21 @@
+@import "../abstracts/variables";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $font-weight-lighter;
+  color: $color-grey-dark-2;
+  line-height: 1.9;
+  background-color: $color-grey-light-1;
+  box-sizing: border-box;
+}

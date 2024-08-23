@@ -1,0 +1,85 @@
+@import "../abstracts/variables";
+
+.section-slider {
+  padding: 15rem 3rem;
+  border-top: 1px solid $color-grey-light-2;
+  transition: transform 1s, opacity 1s;
+
+  .slider {
+    max-width: 100rem;
+    height: 50rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 50rem;
+      transition: transform 1s;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+    &__btn {
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+
+      border: none;
+      background: rgba($color-grey-light-1, 0.7);
+      font-family: inherit;
+      color: $color-grey-dark-3;
+      border-radius: 50%;
+      height: 4rem;
+      width: 4rem;
+      font-size: 2.6em;
+      cursor: pointer;
+
+      &--left {
+        left: 4%;
+        transform: translate(-50%, -50%);
+      }
+
+      &--right {
+        right: 4%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+
+      .dots__dot {
+        border: none;
+        background-color: $color-grey-dark-1;
+        opacity: 0.7;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        box-shadow: 0 3rem 6rem rgba($color-black, 0.7);
+
+        &:last-child {
+          margin: 0;
+        }
+        &--active {
+          background-color: $color-white;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
